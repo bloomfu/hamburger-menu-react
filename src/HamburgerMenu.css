@@ -1,0 +1,99 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-toggle {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 30px;
+  padding: 0;
+  position: relative;
+}
+
+.navbar-toggle-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 2px;
+  background: #333;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggle-icon:before,
+.navbar-toggle-icon:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #333;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggle-icon:before {
+  transform: rotate(45deg);
+  top: -6px;
+}
+
+.navbar-toggle-icon:after {
+  transform: rotate(-45deg);
+  top: 6px;
+}
+
+.navbar-toggle.active .navbar-toggle-icon {
+  background: transparent;
+}
+
+.navbar-toggle.active .navbar-toggle-icon:before {
+  transform: rotate(45deg) translate(0, 6px);
+}
+
+.navbar-toggle.active .navbar-toggle-icon:after {
+  transform: rotate(-45deg) translate(0, -6px);
+}
+
+.navbar-menu {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 80px);
+  background: #f5f5f5;
+  display: none;
+}
+
+.navbar-menu.active {
+  display: block;
+}
+
+.navbar-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  padding: 20px;
+}
+
+.navbar-menu a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar-menu a:hover {
+  color: #666;
+}
